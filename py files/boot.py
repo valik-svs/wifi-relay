@@ -8,8 +8,8 @@ gc.collect()
 import network
 
 
-ssid = 'MiWiFi'
-password = 'Kykyryza.12345'
+ssid = 'eSSID'
+password = 'eSSID_PASSWORD'
 
 
 def do_connect():

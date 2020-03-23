@@ -4,29 +4,20 @@ from umqttsimple import MQTTClient
 from machine import ADC
 from machine import Pin
 from machine import WDT
+
 wdt = WDT()  # enable it with a timeout of 2s
-
-
-
 analog = ADC(0)     # create ADC object on ADC pin
-
 GPIO5_D1 = Pin(5, Pin.OUT)
 GPIO5_D1.on()
 
 mqtt_server = 'mqtt.by'
 mqtt_port = 1883
-mqtt_user = 'valik'
-mqtt_password = '19o9g18o'
-
+mqtt_user = 'MQTT_LOGIN'
+mqtt_password = 'MQTT_PASS'
 client_id = 'wifiRelay'
 topic_prefix = b'/user/valik/'
 topic_sub = topic_prefix + b'krd/zal/clickRelay'
 topic_pub = topic_prefix + b'krd/zal/status'
-
-last_message = 0
-message_interval = 5
-counter = 0
-
 
 # Complete project details at https://RandomNerdTutorials.com
 
